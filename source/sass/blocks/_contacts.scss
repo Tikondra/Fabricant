@@ -1,0 +1,129 @@
+.contacts {
+  color: #ffffff;
+  background-image: url("../img/contacts-back.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.contacts__wrapper {
+  padding: 120px 20px 50px;
+}
+
+.contacts__adress {
+  margin: 25px 0;
+  font-size: 16px;
+  font-weight: 100;
+  color: #ffffff;
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    background-image: url("../img/pin.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contacts__tel {
+  position: relative;
+  padding-left: 40px;
+  font-size: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contacts__time {
+  font-weight: 100;
+  margin-bottom: 0;
+
+  &--data {
+    margin-top: 0;
+    font-weight: 700;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 768px) {
+  .contacts__wrapper {
+    display: flex;
+    padding-top: 170px;
+  }
+
+  .contacts__info {
+    padding: 30px 70px 30px 30px;
+    border: 7px solid rgba(255, 255, 255, 0.2);
+    margin-right: -50px;
+    margin-bottom: 20px;
+  }
+
+  .contacts__map {
+    margin-top: 30px;
+    width: 50%;
+    height: 300px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    padding: 175px 20px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 470px;
+      height: 300px;
+      background-image: url("../img/contacts-img1.png");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      bottom: 110px;
+      right: 0;
+      width: 115px;
+      height: 115px;
+      background-image: url("../img/kinza.png");
+    }
+  }
+
+  .contacts__info {
+    margin-bottom: 80px;
+  }
+
+  .contacts__map {
+    height: 350px;
+  }
+}

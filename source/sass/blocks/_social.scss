@@ -1,0 +1,46 @@
+.social {
+  display: none;
+  @include list;
+}
+
+@media (min-width: 768px) {
+  .social {
+    display: block;
+    display: flex;
+  }
+
+  .social__link {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/vk.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--fb {
+      background-image: url("../img/fb.svg");
+    }
+
+    &--inst {
+      background-image: url("../img/inst.svg");
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .social {
+    margin-right: 50px;
+  }
+
+  .social__item {
+    margin: 0 10px;
+  }
+
+  .social__link {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

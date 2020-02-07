@@ -1,0 +1,127 @@
+.navigation__btn-cont {
+  position: absolute;
+  width: 38px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 3px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 38px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: 0.3s ease;
+  }
+
+  &::before {
+    top: -10px;
+  }
+}
+
+.navigation__btn {
+  position: relative;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  &--active .navigation__btn-cont {
+    background-color: transparent;
+  }
+
+  &--active .navigation__btn-cont::after {
+    transform: rotate(45deg) translate(-4px, -4px);
+  }
+
+  &--active .navigation__btn-cont::before {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+}
+
+.navigation__list {
+  @include list;
+  padding: 5px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  background-image: url("../img/back-header.png");
+  background-repeat: no-repeat;
+
+  &--active {
+    visibility: visible;
+    z-index: 1;
+  }
+
+  a {
+    color: #ffffff;
+  }
+}
+
+.PushRight {
+  transform-origin: 100% 50%;
+  animation: rotatePushRight .8s both ease;
+  animation-delay: .180s;
+}
+
+.PullRight {
+  transform-origin: 100% 50%;
+  animation: rotatePullRight .5s both ease;
+  animation-delay: .180s;
+}
+
+@keyframes rotatePullRight {
+  from { opacity: 0; -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); }
+}
+
+@keyframes rotatePushRight {
+  from { }
+  to { opacity: 0; -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); }
+}
+
+@media (min-width: 768px) {
+  .navigation__list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+
+    li {
+      margin: 40px 20px 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__btn {
+    display: none;
+  }
+
+  .navigation__list {
+    visibility: visible;
+    position: static;
+    justify-content: flex-start;
+    background-image: none;
+
+    li {
+      margin: 30px 20px 0;
+    }
+  }
+}
