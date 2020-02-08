@@ -1,10 +1,9 @@
 .navigation {
   position: fixed;
   top: 0;
-  right: -320px;
-  z-index: 1001;
+  right: -100%;
+  z-index: 10;
   width: 100%;
-  max-width: 320px;
   height: 100%;
   background: #373a47;
   padding: 0;
@@ -17,10 +16,44 @@
     transition-timing-function: cubic-bezier(0.7,0,0.3,1);
   }
 }
-@media (min-width: 768px) {
 
+.navigation__list {
+  @include list;
+  padding: 100px 30px;
+}
+
+.navigation__link {
+  display: block;
+  padding: 5px 25px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    right: -320px;
+    width: 320px;
+
+    &--show {
+      right: 0;
+
+      & ~ .header__open-menu span {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
+  .navigation {
 
+    &--show {
+
+      & ~ .header__open-menu span {
+        display: inline;
+      }
+    }
+  }
 }

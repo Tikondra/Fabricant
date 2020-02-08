@@ -1,17 +1,18 @@
 .header {
+  position: relative;
   padding: 20px;
-  overflow: hidden;
 }
 
 .header__logo {
   display: block;
   width: 225px;
-  margin: auto;
 }
 
 .header__address {
   display: flex;
   align-items: center;
+  font-size: 16px;
+  line-height: 15px;
 
   span {
     max-width: 200px;
@@ -24,6 +25,8 @@
   align-items: center;
   color: #000;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
 
   span {
     margin-left: 10px;
@@ -31,5 +34,56 @@
 }
 
 .header__open-menu {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 20;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "GothamPro", "Tahoma", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 
+  span {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    margin-right: 10px;
+  }
+
+  .header__open-menu {
+    display: flex;
+    align-items: center;
+    position: static;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  .header__logo {
+    margin-right: 100px;
+  }
+
+  .header__open-menu {
+    margin-right: 150px;
+
+    span {
+      display: inline;
+    }
+  }
 }
