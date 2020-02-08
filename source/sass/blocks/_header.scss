@@ -1,5 +1,6 @@
 .header {
   padding: 20px;
+  overflow: hidden;
 }
 
 .header__logo {
@@ -19,8 +20,14 @@
 }
 
 .header__phone {
+  display: flex;
+  align-items: center;
   color: #000;
   text-decoration: none;
+
+  span {
+    margin-left: 10px;
+  }
 }
 
 .header__open-menu {
