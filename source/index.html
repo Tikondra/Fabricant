@@ -7,6 +7,30 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header">
+    <a class="header__logo">
+      <img src="img/logo.svg" width="225" height="63" alt="Fabricant">
+    </a>
+    <p class="header__address">
+      <svg viewBox="0 0 11 16" width="15px" height="20px">
+        <use xlink:href="#icon-pin"></use>
+      </svg>
+      <span>г. Астрахань Рождественского, 1А</span>
+    </p>
+    <a class="header__phone" href="tel:88005115060">8 (800) 511-50-60</a>
+    <nav class="navigation">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <button class="navigation__close" type="button">Закрыть</button>
+    </nav>
+    <button class="header__open-menu" type="button">Меню</button>
+  </header>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,134 +1,28 @@
 .header {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  background-image: url("../img/back-header.png");
-  background-repeat: no-repeat;
-  background-position: center top;
+  padding: 20px;
 }
 
-.header__wrapper {
-  max-width: 1200px;
+.header__logo {
+  display: block;
+  width: 225px;
   margin: auto;
-  display: grid;
-  padding: 10px 9px 0;
 }
 
-.header__adress {
-  grid-area: 1/2/3/2;
-  max-width: 159px;
-  margin: 3px 0;
-  font-size: 16px;
-  font-weight: 100;
-  color: #ffffff;
+.header__address {
+  display: flex;
+  align-items: center;
+
+  span {
+    max-width: 200px;
+    margin-left: 10px;
+  }
 }
 
-.header__tel {
-  grid-area: 2/2/3/2;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
+.header__phone {
+  color: #000;
   text-decoration: none;
 }
 
-.header__nav {
-  grid-area: 1/3/3/4;
-  text-align: right;
-}
+.header__open-menu {
 
-.header__logo-box,
-.header__logo {
-  z-index: 5;
-  min-width: 80px;
-  width: 80px;
-}
-
-.header__logo-box {
-  grid-area: 1/1/3/2;
-}
-
-@media (min-width: 768px) {
-
-  .header__adress {
-    grid-area: 1/2/3/3;
-    position: relative;
-    padding-left: 40px;
-    margin-top: 20px;
-    max-width: none;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: 0;
-      width: 32px;
-      height: 32px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      background-image: url("../img/pin.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .header__tel {
-    grid-area: 1/3/3/4;
-    position: relative;
-    padding-left: 40px;
-    margin-top: 20px;
-    font-size: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: 0;
-      width: 32px;
-      height: 32px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      background-image: url("../img/phone.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .header__logo-box,
-  .header__logo {
-    z-index: 5;
-    min-width: none;
-    width: auto;
-  }
-
-  .header__nav {
-    grid-area: 1/4/3/5;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header__adress {
-    max-width: 159px;
-
-    &::before {
-      top: 10px;
-    }
-  }
-
-  .header__logo-box {
-    grid-area: 1/1/4/2;
-  }
-
-  .header__adress {
-    grid-area: 2/4/3/5;
-    margin-top: 5px;
-  }
-
-  .header__tel {
-    margin-top: 5px;
-    grid-area: 1/4/2/5;
-  }
-
-  .header__nav {
-    grid-area: 1/2/3/4;
-  }
 }
