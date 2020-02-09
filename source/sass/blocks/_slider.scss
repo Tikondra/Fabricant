@@ -1,0 +1,32 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  @include list;
+}
+
+.owl-nav {
+  max-width: 80px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    background-color: #FFD136;
+  }
+}
+
+.slider__pag {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+}
+
+.slider__active-pag {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.slider__all-pag {
+  font-size: 16px;
+}

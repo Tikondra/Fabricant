@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Fabricant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -56,12 +58,39 @@
   </header>
   <main>
     <section class="banner">
-      <h1>Производство и монтаж металлоконструкций</h1>
-      <p>
+      <h1 class="banner__title">Производство и монтаж металлоконструкций</h1>
+      <p class="banner__text">
         10 лет строительства объектов из металлоконструкций различного назначения по всему югу Росси и стран СНГ
       </p>
+      <div class="banner__slider slider">
+        <ul class="slider__list owl-carousel">
+          <li class="slider__item">
+            <picture>
+              <source srcset="img/slide1.webp" type="image/webp">
+              <img src="img/slide1.jpg" width="470" height="575" alt="">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source srcset="img/slide1.webp" type="image/webp">
+              <img src="img/slide1.jpg" width="470" height="575" alt="">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source srcset="img/slide1.webp" type="image/webp">
+              <img src="img/slide1.jpg" width="470" height="575" alt="">
+            </picture>
+          </li>
+        </ul>
+        <div class="slider__pag">
+          <span class="slider__active-pag">01/</span><span class="slider__all-pag">04</span>
+        </div>
+      </div>
     </section>
   </main>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
