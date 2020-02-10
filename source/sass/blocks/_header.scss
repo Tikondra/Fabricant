@@ -8,9 +8,15 @@
   width: 225px;
 }
 
-.header__address {
+.header__address,
+.header__phone {
+  max-width: 200px;
+  margin-left: auto;
   display: flex;
   align-items: center;
+}
+
+.header__address {
   font-size: 16px;
   line-height: 15px;
 
@@ -21,8 +27,6 @@
 }
 
 .header__phone {
-  display: flex;
-  align-items: center;
   color: #000;
   text-decoration: none;
   font-size: 16px;

@@ -15,27 +15,37 @@
   min-width: 100%;
 }
 
-// .owl-nav {
-//   max-width: 80px;
+.slider__controls {
+  display: flex;
+}
 
-//   button {
-//     width: 40px;
-//     height: 40px;
-//     background-color: #FFD136;
-//   }
-// }
+.slider__btn {
+  width: 48px;
+  height: 63px;
+  background-color: #FFD136;
+  border: none;
+  background-image: url("../img/arroy-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--next {
+    background-image: url("../img/arroy-right.svg");
+  }
+}
 
 .slider__pag {
-  position: absolute;
-  bottom: 0;
-  left: 100px;
+  background-color: #FFD136;
+  padding: 18px 5px;
+  width: 85px;
+  font-size: 26px;
+  font-weight: 900;
 }
 
 .slider__active-pag {
-  font-size: 30px;
-  font-weight: 700;
+
 }
 
 .slider__all-pag {
   font-size: 16px;
+  font-weight: 700;
 }

@@ -1,0 +1,28 @@
+.social {
+  @include list;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.social__item {
+  margin: 0 3px;
+}
+
+.social__link {
+  display: block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/inst.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--fb {
+    background-image: url("../img/fb.svg");
+  }
+
+  &--vk {
+    background-image: url("../img/vk.svg");
+  }
+}
