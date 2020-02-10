@@ -12,3 +12,26 @@
     color: #FF2E00;
   }
 }
+
+@media (min-width: 768px) {
+  .portfolio__title {
+    max-width: 880px;
+    margin: 0 auto 30px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .portfolio__slider {
+    margin-right: auto;
+    margin-left: 0;
+    max-width: none;
+  }
+}

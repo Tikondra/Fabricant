@@ -72,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: #ffffffc2;
-  transform: translateY(200px);
+  transform: translateY(100%);
   transition: 0.5s ease;
 
   &--show {
@@ -101,9 +101,51 @@
   }
 }
 
+@media (min-width: 768px) {
+  .slider {
+    max-width: 840px;
+    margin: auto;
+  }
+
+  .slider__info-title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 25px;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .slider__info-text {
+    &--2 {
+      display: block;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .slider {
-    max-width: 865px;
     margin-right: -150px;
+  }
+
+  .slider__btn-info {
+    display: none;
+  }
+
+  .slider__list {
+    &--portfolio {
+      .slider__item {
+        display: flex;
+      }
+    }
+  }
+
+  .slider__info {
+    position: static;
+    transform: translateY(0);
+    max-width: 500px;
+    padding: 0 25px 25px;
+    justify-content: flex-start;
   }
 }
