@@ -10,14 +10,6 @@
     menu.classList.toggle('navigation--show');
   });
 })();
-// слайдер в баннере
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    dots: false,
-    nav: true
-  });
-});
 // слайдер
 (function () {
   var slider = document.querySelector('.slider');
@@ -34,11 +26,12 @@ $(document).ready(function(){
 
   var onMoveSlideNext = function () {
     var widthList = sliderList.getBoundingClientRect().width;
-    var right = sliderList.getBoundingClientRect().left - gap;
+    var right = (getComputedStyle(sliderList).left).slice(0, -2);
     var maxLeft = - ((countSlides * widthList) - widthList);
     var pagActive = Number(pagNumber.textContent);
     var maxPag = countSlides;
     var newLeft = right - widthList;
+
     if (newLeft < maxLeft) {
       newLeft = maxLeft;
     }
