@@ -28,6 +28,10 @@
   }
 }
 
+.banner__scroll {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .banner__title {
     font-size: 48px;
@@ -87,6 +91,7 @@
   }
 
   .banner__scroll {
+    display: block;
     position: relative;
     left: -220px;
     top: -50px;
