@@ -104,6 +104,9 @@
 .slider__preview {
   display: none;
   @include list;
+  position: relative;
+  left: 0;
+  transition: 0.5s ease;
 }
 
 @media (min-width: 768px) {
@@ -190,11 +193,14 @@
     justify-content: flex-start;
   }
 
+  .slider__preview-wrap {
+    overflow-x: hidden;
+    margin-right: 25px;
+  }
+
   .slider__preview {
     display: flex;
     width: 650px;
-    overflow-x: hidden;
-    margin-right: 25px;
   }
 
   .slider__preview-item {
