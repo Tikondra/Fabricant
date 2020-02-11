@@ -116,7 +116,7 @@
       };
       btnNext.addEventListener('click', onMoveNextPreview);
       btnPrev.addEventListener('click', onMovePrevPreview);
-    };    
+    };
 
     if (slider.querySelector('.slider__btn-info')) {
       showInfo();
