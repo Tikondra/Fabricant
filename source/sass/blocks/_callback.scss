@@ -1,0 +1,77 @@
+.callback {
+  padding: 30px 5px;
+  background-color: #EFEFEF;
+}
+
+.callback__form {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.callback__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  span {
+    color: #FF2E00;
+  }
+}
+
+.callback__input {
+  padding: 13px 20px;
+  margin-bottom: 20px;
+  font-family: "GothamPro", "Tahoma", sans-serif;
+  border: none;
+  background-color: #EFEFEF;
+}
+
+.callback__submit {
+  padding: 17px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  background-color: #F6BE2D;
+}
+
+@media (min-width: 768px) {
+  .callback {
+    padding: 30px;
+  }
+
+  .callback__form {
+    max-width: 550px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .callback__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 127px 0;
+    background-image: url("../img/callback-back.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  .callback__form {
+    max-width: 640px;
+    margin-right: 0;
+    padding: 10px 50px 30px;
+  }
+
+  .callback__input {
+    width: 50%;
+  }
+
+  .callback__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .callback__submit {
+    width: 50%;
+  }
+}

@@ -1,5 +1,6 @@
 .portfolio {
   padding: 20px;
+  background-color: #EFEFEF;
 }
 
 .portfolio__title {
@@ -25,8 +26,17 @@
 
 @media (min-width: 1024px) {
   .portfolio {
+    padding: 70px 0 100px;
+  }
+
+  .portfolio__wrapper {
     max-width: 1200px;
     margin: auto;
+    background-color: #fff;
+    padding: 45px 0 0 66px;
+    background-image: url("../img/portfolio-back.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
   }
 
   .portfolio__slider {

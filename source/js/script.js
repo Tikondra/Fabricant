@@ -69,10 +69,20 @@
         })
       })
     };
+    var preview = function () {
+      var previews = slider.querySelectorAll('.slider__preview-item');
+      previews.forEach(function (item,index) {
+        item.addEventListener('click', function () {
+          slides[index].src = item.src;
+        })
+      })
+    };
+
+    preview();
+
     if (slider.querySelector('.slider__btn-info')) {
       showInfo();
     }
-
     pagAllCount.textContent = '0' + slides.length;
     btnNext.addEventListener('click', onMoveSlideNext);
     btnPrev.addEventListener('click', onMoveSlidePrev);
