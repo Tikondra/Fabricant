@@ -5,9 +5,12 @@
   var menu = document.querySelector('.navigation');
   var menuOpenBtn = document.querySelector('.header__open-menu');
   var menuCloseBtn = menu.querySelector('.navigation__close');
+  var btnSvg = document.querySelector('.ham1');
 
   menuOpenBtn.addEventListener('click', function () {
     menu.classList.toggle('navigation--show');
+    menuOpenBtn.classList.toggle('header__open-menu--active');
+    btnSvg.classList.toggle('active');
   });
 })();
 // слайдер

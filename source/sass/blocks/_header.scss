@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   padding: 20px;
 }
 
@@ -69,7 +68,10 @@
   .header__open-menu {
     display: flex;
     align-items: center;
-    position: static;
+  }
+
+  .header__phone {
+    margin-right: 40px;
   }
 }
 
@@ -84,11 +86,19 @@
   }
 
   .header__open-menu {
-    margin-left: 100px;
-    margin-right: 120px;
-
     span {
       display: inline;
+      transition: 0.5s ease;
     }
+
+    &--active {
+      span {
+        color: #fff;
+      }
+    }
+  }
+
+  .header__phone {
+    margin-right: 130px;
   }
 }
