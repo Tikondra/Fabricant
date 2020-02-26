@@ -130,5 +130,79 @@
     btnPrev.addEventListener('click', onMoveSlidePrev);
   };
   sliderInit(sliderBanner);
-  sliderInit(sliderPortfolio);
+
+  var initSlider = function (slider) {
+    var slideIndex = 1;
+    showSlide();
+    init();
+
+    slider.querySelector('.slider__btn--next').addEventListener('click', function () {
+      slideIndex++;
+      showSlide();
+    });
+    slider.querySelector('.slider__btn--prev').addEventListener('click', function () {
+      slideIndex--;
+      showSlide();
+    });
+
+    function init () {
+      var dotBox = slider.querySelectorAll('.slider__dots');
+
+      dotBox.forEach(function (container) {
+        var dots = container.querySelectorAll('.slider__dot');
+        dots[0].classList.add('slider__dot--active');
+      })
+    }
+
+    function showSlide () {
+      var slides = slider.querySelectorAll('.slider__item');
+      var numbSlider = slider.querySelector('.slider__active-pag');
+      var pagAllCount = slider.querySelector('.slider__all-pag');
+
+      slides.forEach(function (item) {
+        item.classList.add('slider__item--hide');
+      });
+
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      } else if (slideIndex < 1) {
+        slideIndex = slides.length;
+      }
+      slides[slideIndex - 1].classList.remove('slider__item--hide');
+      numbSlider.textContent = '0' + slideIndex;
+      pagAllCount.textContent = '0' + slides.length;
+    }
+
+    slider.querySelectorAll('.slider__dot').forEach(function (item) {
+      item.addEventListener('click', function (evt) {
+        var index = slideIndex - 1;
+        deleteActive(index);
+        var sliderImg = slider.querySelectorAll('.slider__img')[index];
+        var dotImg = item.querySelector('img');
+        sliderImg.src = dotImg.src;
+        item.classList.add('slider__dot--active');
+
+      });
+    });
+
+    function deleteActive (index) {
+      var dots = slider
+        .querySelectorAll('.slider__dots')[index]
+        .querySelectorAll('.slider__dot');
+
+      dots.forEach(function (item) {
+        item.classList.remove('slider__dot--active');
+      });
+    }
+
+    var moreInfo = slider.querySelectorAll('.slider__more-info');
+
+    moreInfo.forEach(function (item) {
+      item.addEventListener('click', function () {
+        item.classList.toggle('slider__more-info--active');
+      })
+    })
+  };
+
+  initSlider(sliderPortfolio);
 })();
